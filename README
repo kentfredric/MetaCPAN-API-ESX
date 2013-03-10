@@ -1,0 +1,34 @@
+NAME
+    MetaCPAN::API::ESX - Access the MetaCPAN API Via ElasticSearch Models
+
+VERSION
+    version 0.1.0
+
+SYNOPSIS
+        my $es = MetaCPAN::API::ESX->new();
+
+        my $iterator = $es->author->filter({
+            or => [
+                { term => { country => 'NZ' }},
+                { term => { country => 'AU' }},
+            ]
+        })->size(500)->scroll(5m);
+
+        while( my $author = $iterator->next ){
+            printf "%4s: %20s => %-40s ( %s )\n",
+                $result->country,
+                $result->pauseid,
+                $result->name,
+                join q{,}, grep { defined } $result->city, $result->region;
+        }
+
+AUTHOR
+    Kent Fredric <kentfredric@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Kent Fredric
+    <kentfredric@gmail.com>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

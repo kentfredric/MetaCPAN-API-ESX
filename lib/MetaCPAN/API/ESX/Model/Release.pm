@@ -3,7 +3,7 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Release::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Release::VERSION = '0.1.0';
+  $MetaCPAN::API::ESX::Model::Release::VERSION = '0.001000';
 }
 use strict;
 use warnings FATAL => 'all';
@@ -522,7 +522,7 @@ MetaCPAN::API::ESX::Model::Release
 
 =head1 VERSION
 
-version 0.1.0
+version 0.001000
 
 =head1 AUTHOR
 

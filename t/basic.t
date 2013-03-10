@@ -10,11 +10,11 @@ my $esx = MetaCPAN::API::ESX->new();
 use ElasticSearch;
 $ElasticSearch::DEBUG = 1;
 
-my $scroller = $esx->author->size(1000)->filter(
+my $scroller = $esx->author->size(100)->filter(
   {
     or => [ { term => { country => 'NZ' } }, { term => { country => 'AU' } } ],
   }
-)->scroll('5m');
+)->scroll('1m');
 
 while ( my $result = $scroller->next ) {
 

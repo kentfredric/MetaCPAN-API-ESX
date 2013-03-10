@@ -3,19 +3,25 @@ use strict;
 use warnings;
 
 use Test::More;
+
 use MetaCPAN::API::ESX;
 
 my $esx = MetaCPAN::API::ESX->new();
+use ElasticSearch;
+$ElasticSearch::DEBUG = 1;
 
-my $author = $esx->author->filter(
+my $scroller = $esx->author->size(1000)->filter(
   {
-    term => { pauseid => 'KENTNL' },
+    or => [ { term => { country => 'NZ' } }, { term => { country => 'AU' } } ],
   }
-)->all;
+)->scroll('5m');
 
-use Data::Dump qw( pp );
+while ( my $result = $scroller->next ) {
 
-pp $author;
+  note sprintf "%4s: %20s => %-40s ( %s )\n", $result->country, $result->pauseid, $result->name, join q{,},
+    grep { defined } $result->city, $result->region;
+
+}
 pass('all good');
 
 done_testing;

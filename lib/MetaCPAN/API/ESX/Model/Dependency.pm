@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Dependency;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for dependency
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -16,11 +19,11 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "module",
 #   typename => "dependency",
 # }
-has "module"                       => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'module'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -34,11 +37,11 @@ has "module"                       => (
 #   propertyname => "phase",
 #   typename => "dependency",
 # }
-has "phase"                        => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'phase'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -52,11 +55,11 @@ has "phase"                        => (
 #   propertyname => "relationship",
 #   typename => "dependency",
 # }
-has "relationship"                 => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'relationship'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -70,11 +73,11 @@ has "relationship"                 => (
 #   propertyname => "version",
 #   typename => "dependency",
 # }
-has "version"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -82,10 +85,10 @@ has "version"                      => (
 #   propertyname => "version_numified",
 #   typename => "dependency",
 # }
-has "version_numified"             => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;

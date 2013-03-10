@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Module;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for module
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -10,10 +13,10 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "associated_pod",
 #   typename => "module",
 # }
-has "associated_pod"               => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'associated_pod'               => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -21,10 +24,10 @@ has "associated_pod"               => (
 #   propertyname => "authorized",
 #   typename => "module",
 # }
-has "authorized"                   => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "boolean",
+has 'authorized'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
 # {
 #   index => "cpan_v1",
@@ -32,10 +35,10 @@ has "authorized"                   => (
 #   propertyname => "indexed",
 #   typename => "module",
 # }
-has "indexed"                      => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "boolean",
+has 'indexed'                      => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
 # do {
 #   my $a = {
@@ -77,8 +80,8 @@ has "indexed"                      => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "name"                         => (
-    "is"                           => "rw",
+has 'name'                         => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -92,11 +95,11 @@ has "name"                         => (
 #   propertyname => "version",
 #   typename => "module",
 # }
-has "version"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -104,10 +107,10 @@ has "version"                      => (
 #   propertyname => "version_numified",
 #   typename => "module",
 # }
-has "version_numified"             => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;

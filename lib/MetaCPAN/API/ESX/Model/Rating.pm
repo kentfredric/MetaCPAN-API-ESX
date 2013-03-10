@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Rating;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for rating
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -16,11 +19,11 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "author",
 #   typename => "rating",
 # }
-has "author"                       => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -28,9 +31,9 @@ has "author"                       => (
 #   propertyname => "date",
 #   typename => "rating",
 # }
-has "date"                         => (
-    "is"                           => "rw",
-    "store"                        => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
 # {
 #   index => "cpan_v1",
@@ -49,9 +52,9 @@ has "date"                         => (
 #   propertyname => "details",
 #   typename => "rating",
 # }
-has "details"                      => (
-    "dynamic"                      => undef,
-    "is"                           => "rw",
+has 'details'                      => (
+    'dynamic'                      => undef,
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -65,11 +68,11 @@ has "details"                      => (
 #   propertyname => "distribution",
 #   typename => "rating",
 # }
-has "distribution"                 => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'distribution'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -89,9 +92,9 @@ has "distribution"                 => (
 #   propertyname => "helpful",
 #   typename => "rating",
 # }
-has "helpful"                      => (
-    "dynamic"                      => undef,
-    "is"                           => "rw",
+has 'helpful'                      => (
+    'dynamic'                      => undef,
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -99,10 +102,10 @@ has "helpful"                      => (
 #   propertyname => "rating",
 #   typename => "rating",
 # }
-has "rating"                       => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "float",
+has 'rating'                       => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 # {
 #   index => "cpan_v1",
@@ -116,11 +119,11 @@ has "rating"                       => (
 #   propertyname => "release",
 #   typename => "rating",
 # }
-has "release"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'release'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -134,11 +137,11 @@ has "release"                      => (
 #   propertyname => "user",
 #   typename => "rating",
 # }
-has "user"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'user'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;

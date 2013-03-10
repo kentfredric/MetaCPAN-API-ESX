@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Distribution;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for distribution
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -39,9 +42,9 @@ use ElasticSearchX::Model::Document;
 #   $a->{propertydata}{properties}{type}{omit_norms} = \${$a->{propertydata}{properties}{source}{omit_norms}};
 #   $a;
 # }
-has "bugs"                         => (
-    "dynamic"                      => "1",
-    "is"                           => "rw",
+has 'bugs'                         => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -55,11 +58,11 @@ has "bugs"                         => (
 #   propertyname => "name",
 #   typename => "distribution",
 # }
-has "name"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'name'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;

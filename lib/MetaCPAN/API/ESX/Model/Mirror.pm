@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Mirror;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for mirror
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -16,11 +19,11 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "A_or_CNAME",
 #   typename => "mirror",
 # }
-has "A_or_CNAME"                   => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'A_or_CNAME'                   => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -34,11 +37,11 @@ has "A_or_CNAME"                   => (
 #   propertyname => "aka_name",
 #   typename => "mirror",
 # }
-has "aka_name"                     => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'aka_name'                     => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -52,11 +55,11 @@ has "aka_name"                     => (
 #   propertyname => "ccode",
 #   typename => "mirror",
 # }
-has "ccode"                        => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'ccode'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -81,8 +84,8 @@ has "ccode"                        => (
 #   propertyname => "city",
 #   typename => "mirror",
 # }
-has "city"                         => (
-    "is"                           => "rw",
+has 'city'                         => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -96,11 +99,11 @@ has "city"                         => (
 #   propertyname => "contact",
 #   typename => "mirror",
 # }
-has "contact"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'contact'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -125,8 +128,8 @@ has "contact"                      => (
 #   propertyname => "continent",
 #   typename => "mirror",
 # }
-has "continent"                    => (
-    "is"                           => "rw",
+has 'continent'                    => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -151,8 +154,8 @@ has "continent"                    => (
 #   propertyname => "country",
 #   typename => "mirror",
 # }
-has "country"                      => (
-    "is"                           => "rw",
+has 'country'                      => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -166,11 +169,11 @@ has "country"                      => (
 #   propertyname => "dnsrr",
 #   typename => "mirror",
 # }
-has "dnsrr"                        => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'dnsrr'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -184,11 +187,11 @@ has "dnsrr"                        => (
 #   propertyname => "freq",
 #   typename => "mirror",
 # }
-has "freq"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'freq'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -202,11 +205,11 @@ has "freq"                         => (
 #   propertyname => "ftp",
 #   typename => "mirror",
 # }
-has "ftp"                          => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'ftp'                          => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -220,11 +223,11 @@ has "ftp"                          => (
 #   propertyname => "http",
 #   typename => "mirror",
 # }
-has "http"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'http'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -232,9 +235,9 @@ has "http"                         => (
 #   propertyname => "inceptdate",
 #   typename => "mirror",
 # }
-has "inceptdate"                   => (
-    "is"                           => "rw",
-    "store"                        => "yes",
+has 'inceptdate'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
 # {
 #   index => "cpan_v1",
@@ -242,8 +245,8 @@ has "inceptdate"                   => (
 #   propertyname => "location",
 #   typename => "mirror",
 # }
-has "location"                     => (
-    "is"                           => "rw",
+has 'location'                     => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -257,11 +260,11 @@ has "location"                     => (
 #   propertyname => "name",
 #   typename => "mirror",
 # }
-has "name"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'name'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -275,11 +278,11 @@ has "name"                         => (
 #   propertyname => "note",
 #   typename => "mirror",
 # }
-has "note"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'note'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -304,8 +307,8 @@ has "note"                         => (
 #   propertyname => "org",
 #   typename => "mirror",
 # }
-has "org"                          => (
-    "is"                           => "rw",
+has 'org'                          => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -330,8 +333,8 @@ has "org"                          => (
 #   propertyname => "region",
 #   typename => "mirror",
 # }
-has "region"                       => (
-    "is"                           => "rw",
+has 'region'                       => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -339,9 +342,9 @@ has "region"                       => (
 #   propertyname => "reitredate",
 #   typename => "mirror",
 # }
-has "reitredate"                   => (
-    "is"                           => "rw",
-    "store"                        => "yes",
+has 'reitredate'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
 # {
 #   index => "cpan_v1",
@@ -355,11 +358,11 @@ has "reitredate"                   => (
 #   propertyname => "rsync",
 #   typename => "mirror",
 # }
-has "rsync"                        => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'rsync'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -373,11 +376,11 @@ has "rsync"                        => (
 #   propertyname => "src",
 #   typename => "mirror",
 # }
-has "src"                          => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'src'                          => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -391,11 +394,11 @@ has "src"                          => (
 #   propertyname => "tz",
 #   typename => "mirror",
 # }
-has "tz"                           => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'tz'                           => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;

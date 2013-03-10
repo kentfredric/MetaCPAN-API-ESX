@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Release;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for release
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -27,8 +30,8 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "abstract",
 #   typename => "release",
 # }
-has "abstract"                     => (
-    "is"                           => "rw",
+has 'abstract'                     => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -42,11 +45,11 @@ has "abstract"                     => (
 #   propertyname => "archive",
 #   typename => "release",
 # }
-has "archive"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'archive'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -60,11 +63,11 @@ has "archive"                      => (
 #   propertyname => "author",
 #   typename => "release",
 # }
-has "author"                       => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -72,10 +75,10 @@ has "author"                       => (
 #   propertyname => "authorized",
 #   typename => "release",
 # }
-has "authorized"                   => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "boolean",
+has 'authorized'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
 # {
 #   index => "cpan_v1",
@@ -83,9 +86,9 @@ has "authorized"                   => (
 #   propertyname => "date",
 #   typename => "release",
 # }
-has "date"                         => (
-    "is"                           => "rw",
-    "store"                        => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
 # do {
 #   my $a = {
@@ -135,10 +138,10 @@ has "date"                         => (
 #   $a->{propertydata}{properties}{version}{omit_norms} = \${$a->{propertydata}{include_in_root}};
 #   $a;
 # }
-has "dependency"                   => (
-    "dynamic"                      => undef,
-    "include_in_root"              => "1",
-    "is"                           => "rw",
+has 'dependency'                   => (
+    'dynamic'                      => undef,
+    'include_in_root'              => '1',
+    'is'                           => 'rw',
 );
 # do {
 #   my $a = {
@@ -180,8 +183,8 @@ has "dependency"                   => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "distribution"                 => (
-    "is"                           => "rw",
+has 'distribution'                 => (
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -195,11 +198,11 @@ has "distribution"                 => (
 #   propertyname => "download_url",
 #   typename => "release",
 # }
-has "download_url"                 => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'download_url'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -207,10 +210,10 @@ has "download_url"                 => (
 #   propertyname => "first",
 #   typename => "release",
 # }
-has "first"                        => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "boolean",
+has 'first'                        => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
 # {
 #   index => "cpan_v1",
@@ -224,11 +227,11 @@ has "first"                        => (
 #   propertyname => "id",
 #   typename => "release",
 # }
-has "id"                           => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'id'                           => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -242,11 +245,11 @@ has "id"                           => (
 #   propertyname => "license",
 #   typename => "release",
 # }
-has "license"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'license'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -260,11 +263,11 @@ has "license"                      => (
 #   propertyname => "maturity",
 #   typename => "release",
 # }
-has "maturity"                     => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'maturity'                     => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # do {
 #   my $a = {
@@ -306,8 +309,8 @@ has "maturity"                     => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "name"                         => (
-    "is"                           => "rw",
+has 'name'                         => (
+    'is'                           => 'rw',
 );
 # do {
 #   my $a = {
@@ -397,10 +400,10 @@ has "name"                         => (
 #   $a->{propertydata}{properties}{repository}{properties}{web}{omit_norms} = \${$a->{propertydata}{include_in_root}};
 #   $a;
 # }
-has "resources"                    => (
-    "dynamic"                      => "1",
-    "include_in_root"              => "1",
-    "is"                           => "rw",
+has 'resources'                    => (
+    'dynamic'                      => '1',
+    'include_in_root'              => '1',
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -417,9 +420,9 @@ has "resources"                    => (
 #   propertyname => "stat",
 #   typename => "release",
 # }
-has "stat"                         => (
-    "dynamic"                      => "1",
-    "is"                           => "rw",
+has 'stat'                         => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -433,11 +436,11 @@ has "stat"                         => (
 #   propertyname => "status",
 #   typename => "release",
 # }
-has "status"                       => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'status'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -453,9 +456,9 @@ has "status"                       => (
 #   propertyname => "tests",
 #   typename => "release",
 # }
-has "tests"                        => (
-    "dynamic"                      => "1",
-    "is"                           => "rw",
+has 'tests'                        => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
 # {
 #   index => "cpan_v1",
@@ -469,11 +472,11 @@ has "tests"                        => (
 #   propertyname => "version",
 #   typename => "release",
 # }
-has "version"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -481,10 +484,10 @@ has "version"                      => (
 #   propertyname => "version_numified",
 #   typename => "release",
 # }
-has "version_numified"             => (
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;

@@ -1,6 +1,9 @@
 package MetaCPAN::API::ESX::Model::Favorite;
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for favorite
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -16,11 +19,11 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "author",
 #   typename => "favorite",
 # }
-has "author"                       => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -28,9 +31,9 @@ has "author"                       => (
 #   propertyname => "date",
 #   typename => "favorite",
 # }
-has "date"                         => (
-    "is"                           => "rw",
-    "store"                        => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
 # {
 #   index => "cpan_v1",
@@ -44,11 +47,11 @@ has "date"                         => (
 #   propertyname => "distribution",
 #   typename => "favorite",
 # }
-has "distribution"                 => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'distribution'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -62,11 +65,11 @@ has "distribution"                 => (
 #   propertyname => "id",
 #   typename => "favorite",
 # }
-has "id"                           => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'id'                           => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -80,11 +83,11 @@ has "id"                           => (
 #   propertyname => "release",
 #   typename => "favorite",
 # }
-has "release"                      => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'release'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 # {
 #   index => "cpan_v1",
@@ -98,11 +101,11 @@ has "release"                      => (
 #   propertyname => "user",
 #   typename => "favorite",
 # }
-has "user"                         => (
-    "index"                        => "not_analyzed",
-    "is"                           => "rw",
-    "store"                        => "yes",
-    "type"                         => "string",
+has 'user'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;

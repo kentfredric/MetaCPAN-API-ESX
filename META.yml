@@ -20,54 +20,54 @@ name: MetaCPAN-API-ESX
 provides:
   MetaCPAN::API::ESX:
     file: lib/MetaCPAN/API/ESX.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model:
     file: lib/MetaCPAN/API/ESX/Model.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Author:
     file: lib/MetaCPAN/API/ESX/Model/Author.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Dependency:
     file: lib/MetaCPAN/API/ESX/Model/Dependency.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Distribution:
     file: lib/MetaCPAN/API/ESX/Model/Distribution.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Favorite:
     file: lib/MetaCPAN/API/ESX/Model/Favorite.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::File:
     file: lib/MetaCPAN/API/ESX/Model/File.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Mirror:
     file: lib/MetaCPAN/API/ESX/Model/Mirror.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Module:
     file: lib/MetaCPAN/API/ESX/Model/Module.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Profile:
     file: lib/MetaCPAN/API/ESX/Model/Profile.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Rating:
     file: lib/MetaCPAN/API/ESX/Model/Rating.pm
-    version: v0.1.0
+    version: 0.001000
   MetaCPAN::API::ESX::Model::Release:
     file: lib/MetaCPAN/API/ESX/Model/Release.pm
-    version: v0.1.0
+    version: 0.001000
 requires:
   ElasticSearchX::Model: 0
   ElasticSearchX::Model::Document: 0
   Module::Runtime: 0
   Moose: 0
   Scalar::Util: 0
-  perl: v5.10.0
+  perl: 5.006
   strict: 0
   warnings: 0
 resources:
   bugtracker: https://github.com/kentfredric/MetaCPAN-API-ESX/issues
   homepage: https://github.com/kentfredric/MetaCPAN-API-ESX
   repository: https://github.com/kentfredric/MetaCPAN-API-ESX.git
-version: 0.1.0
+version: 0.001000
 x_BuiltWith:
   modules:
     Dist::Zilla::PluginBundle::Author::KENTNL: 1.7.0

@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Dependency::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Dependency::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Dependency::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for dependency
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -22,13 +25,12 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "module",
 #   typename => "dependency",
 # }
-has "module" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'module'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -41,13 +43,12 @@ has "module" => (
 #   propertyname => "phase",
 #   typename => "dependency",
 # }
-has "phase" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'phase'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -60,13 +61,12 @@ has "phase" => (
 #   propertyname => "relationship",
 #   typename => "dependency",
 # }
-has "relationship" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'relationship'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -79,23 +79,22 @@ has "relationship" => (
 #   propertyname => "version",
 #   typename => "dependency",
 # }
-has "version" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "float" },
 #   propertyname => "version_numified",
 #   typename => "dependency",
 # }
-has "version_numified" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;
@@ -111,11 +110,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Dependency
+MetaCPAN::API::ESX::Model::Dependency - Generated model for dependency
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

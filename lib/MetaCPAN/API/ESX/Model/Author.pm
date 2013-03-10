@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Author::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Author::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Author::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for author
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -33,8 +36,9 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "asciiname",
 #   typename => "author",
 # }
-has "asciiname" => ( "is" => "rw", );
-
+has 'asciiname'                    => (
+    'is'                           => 'rw',
+);
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -69,11 +73,10 @@ has "asciiname" => ( "is" => "rw", );
 #   $a->{propertydata}{properties}{url}{omit_norms} = \${$a->{propertydata}{properties}{feed}{omit_norms}};
 #   $a;
 # }
-has "blog" => (
-  "dynamic" => "1",
-  "is"      => "rw",
+has 'blog'                         => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -86,13 +89,12 @@ has "blog" => (
 #   propertyname => "city",
 #   typename => "author",
 # }
-has "city" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'city'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -105,13 +107,12 @@ has "city" => (
 #   propertyname => "country",
 #   typename => "author",
 # }
-has "country" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'country'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -124,13 +125,12 @@ has "country" => (
 #   propertyname => "dir",
 #   typename => "author",
 # }
-has "dir" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'dir'                          => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -159,11 +159,10 @@ has "dir" => (
 #   $a->{propertydata}{properties}{name}{omit_norms} = \${$a->{propertydata}{properties}{id}{omit_norms}};
 #   $a;
 # }
-has "donation" => (
-  "dynamic" => "1",
-  "is"      => "rw",
+has 'donation'                     => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -176,13 +175,12 @@ has "donation" => (
 #   propertyname => "email",
 #   typename => "author",
 # }
-has "email" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'email'                        => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -195,21 +193,21 @@ has "email" => (
 #   propertyname => "gravatar_url",
 #   typename => "author",
 # }
-has "gravatar_url" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'gravatar_url'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { type => "geo_point" },
 #   propertyname => "location",
 #   typename => "author",
 # }
-has "location" => ( "is" => "rw", );
-
+has 'location'                     => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -233,8 +231,9 @@ has "location" => ( "is" => "rw", );
 #   propertyname => "name",
 #   typename => "author",
 # }
-has "name" => ( "is" => "rw", );
-
+has 'name'                         => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -247,13 +246,12 @@ has "name" => ( "is" => "rw", );
 #   propertyname => "pauseid",
 #   typename => "author",
 # }
-has "pauseid" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'pauseid'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -282,11 +280,10 @@ has "pauseid" => (
 #   $a->{propertydata}{properties}{url}{omit_norms} = \${$a->{propertydata}{properties}{name}{omit_norms}};
 #   $a;
 # }
-has "perlmongers" => (
-  "dynamic" => "1",
-  "is"      => "rw",
+has 'perlmongers'                  => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -329,12 +326,11 @@ has "perlmongers" => (
 #   $a->{propertydata}{properties}{name}{omit_norms} = \${$a->{propertydata}{include_in_root}};
 #   $a;
 # }
-has "profile" => (
-  "dynamic"         => undef,
-  "include_in_root" => "1",
-  "is"              => "rw",
+has 'profile'                      => (
+    'dynamic'                      => undef,
+    'include_in_root'              => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -347,24 +343,22 @@ has "profile" => (
 #   propertyname => "region",
 #   typename => "author",
 # }
-has "region" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'region'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { format => "dateOptionalTime", store => "yes", type => "date" },
 #   propertyname => "updated",
 #   typename => "author",
 # }
-has "updated" => (
-  "is"    => "rw",
-  "store" => "yes",
+has 'updated'                      => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -377,13 +371,12 @@ has "updated" => (
 #   propertyname => "user",
 #   typename => "author",
 # }
-has "user" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'user'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -396,11 +389,11 @@ has "user" => (
 #   propertyname => "website",
 #   typename => "author",
 # }
-has "website" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'website'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;
@@ -416,11 +409,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Author
+MetaCPAN::API::ESX::Model::Author - Generated model for author
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

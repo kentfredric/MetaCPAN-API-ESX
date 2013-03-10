@@ -48,7 +48,7 @@
             "Module::Runtime" : "0",
             "Moose" : "0",
             "Scalar::Util" : "0",
-            "perl" : "5.006",
+            "perl" : "v5.10.0",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -65,51 +65,51 @@
    "provides" : {
       "MetaCPAN::API::ESX" : {
          "file" : "lib/MetaCPAN/API/ESX.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model" : {
          "file" : "lib/MetaCPAN/API/ESX/Model.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Author" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Author.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Dependency" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Dependency.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Distribution" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Distribution.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Favorite" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Favorite.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::File" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/File.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Mirror" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Mirror.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Module" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Module.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Profile" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Profile.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Rating" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Rating.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       },
       "MetaCPAN::API::ESX::Model::Release" : {
          "file" : "lib/MetaCPAN/API/ESX/Model/Release.pm",
-         "version" : "0.001000"
+         "version" : "v0.1.0"
       }
    },
    "release_status" : "stable",
@@ -124,7 +124,7 @@
          "web" : "https://github.com/kentfredric/MetaCPAN-API-ESX"
       }
    },
-   "version" : "0.001000",
+   "version" : "0.1.0",
    "x_BuiltWith" : {
       "modules" : {
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "1.7.0",
@@ -132,7 +132,7 @@
          "ElasticSearch" : "0.64",
          "ElasticSearchX::Model" : "0.1.3",
          "ElasticSearchX::Model::Document" : "0.1.3",
-         "ElasticSearchX::Model::Generator" : "0.1.2",
+         "ElasticSearchX::Model::Generator" : "0.1.3",
          "File::Find" : "1.23",
          "File::Temp" : "0.22_90",
          "Module::Build" : "0.4003",

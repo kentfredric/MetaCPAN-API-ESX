@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Distribution::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Distribution::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Distribution::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for distribution
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -45,11 +48,10 @@ use ElasticSearchX::Model::Document;
 #   $a->{propertydata}{properties}{type}{omit_norms} = \${$a->{propertydata}{properties}{source}{omit_norms}};
 #   $a;
 # }
-has "bugs" => (
-  "dynamic" => "1",
-  "is"      => "rw",
+has 'bugs'                         => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -62,11 +64,11 @@ has "bugs" => (
 #   propertyname => "name",
 #   typename => "distribution",
 # }
-has "name" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'name'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;
@@ -82,11 +84,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Distribution
+MetaCPAN::API::ESX::Model::Distribution - Generated model for distribution
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

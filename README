@@ -2,7 +2,7 @@ NAME
     MetaCPAN::API::ESX - Access the MetaCPAN API Via ElasticSearch Models
 
 VERSION
-    version 0.001000
+    version 0.1.0
 
 SYNOPSIS
         my $es = MetaCPAN::API::ESX->new();

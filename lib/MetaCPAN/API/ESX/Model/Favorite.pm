@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Favorite::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Favorite::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Favorite::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for favorite
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -22,24 +25,22 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "author",
 #   typename => "favorite",
 # }
-has "author" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { format => "dateOptionalTime", store => "yes", type => "date" },
 #   propertyname => "date",
 #   typename => "favorite",
 # }
-has "date" => (
-  "is"    => "rw",
-  "store" => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -52,13 +53,12 @@ has "date" => (
 #   propertyname => "distribution",
 #   typename => "favorite",
 # }
-has "distribution" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'distribution'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -71,13 +71,12 @@ has "distribution" => (
 #   propertyname => "id",
 #   typename => "favorite",
 # }
-has "id" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'id'                           => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -90,13 +89,12 @@ has "id" => (
 #   propertyname => "release",
 #   typename => "favorite",
 # }
-has "release" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'release'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -109,11 +107,11 @@ has "release" => (
 #   propertyname => "user",
 #   typename => "favorite",
 # }
-has "user" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'user'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;
@@ -129,11 +127,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Favorite
+MetaCPAN::API::ESX::Model::Favorite - Generated model for favorite
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

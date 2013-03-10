@@ -6,7 +6,7 @@ BEGIN {
   $MetaCPAN::API::ESX::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::VERSION = '0.1.0';
 }
 
 # ABSTRACT: Access the MetaCPAN API Via ElasticSearch Models
@@ -77,7 +77,7 @@ MetaCPAN::API::ESX - Access the MetaCPAN API Via ElasticSearch Models
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 SYNOPSIS
 

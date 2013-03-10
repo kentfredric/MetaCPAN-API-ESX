@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Profile::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Profile::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Profile::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for profile
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -33,8 +36,9 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "id",
 #   typename => "profile",
 # }
-has "id" => ( "is" => "rw", );
-
+has 'id'                           => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -47,11 +51,11 @@ has "id" => ( "is" => "rw", );
 #   propertyname => "name",
 #   typename => "profile",
 # }
-has "name" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'name'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;
@@ -67,11 +71,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Profile
+MetaCPAN::API::ESX::Model::Profile - Generated model for profile
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

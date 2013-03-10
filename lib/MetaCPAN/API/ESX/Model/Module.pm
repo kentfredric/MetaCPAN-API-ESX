@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Module::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Module::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Module::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for module
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -16,36 +19,33 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "associated_pod",
 #   typename => "module",
 # }
-has "associated_pod" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'associated_pod'               => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "authorized",
 #   typename => "module",
 # }
-has "authorized" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'authorized'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "indexed",
 #   typename => "module",
 # }
-has "indexed" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'indexed'                      => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -86,8 +86,9 @@ has "indexed" => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "name" => ( "is" => "rw", );
-
+has 'name'                         => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -100,23 +101,22 @@ has "name" => ( "is" => "rw", );
 #   propertyname => "version",
 #   typename => "module",
 # }
-has "version" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "float" },
 #   propertyname => "version_numified",
 #   typename => "module",
 # }
-has "version_numified" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;
@@ -132,11 +132,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Module
+MetaCPAN::API::ESX::Model::Module - Generated model for module
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

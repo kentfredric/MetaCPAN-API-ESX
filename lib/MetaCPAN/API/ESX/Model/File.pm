@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::File::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::File::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::File::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for file
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -33,8 +36,9 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "abstract",
 #   typename => "file",
 # }
-has "abstract" => ( "is" => "rw", );
-
+has 'abstract'                     => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -47,48 +51,44 @@ has "abstract" => ( "is" => "rw", );
 #   propertyname => "author",
 #   typename => "file",
 # }
-has "author" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "authorized",
 #   typename => "file",
 # }
-has "authorized" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'authorized'                   => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "binary",
 #   typename => "file",
 # }
-has "binary" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'binary'                       => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { format => "dateOptionalTime", store => "yes", type => "date" },
 #   propertyname => "date",
 #   typename => "file",
 # }
-has "date" => (
-  "is"    => "rw",
-  "store" => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -112,20 +112,20 @@ has "date" => (
 #   propertyname => "description",
 #   typename => "file",
 # }
-has "description" => ( "is" => "rw", );
-
+has 'description'                  => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "directory",
 #   typename => "file",
 # }
-has "directory" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'directory'                    => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -166,8 +166,9 @@ has "directory" => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "distribution" => ( "is" => "rw", );
-
+has 'distribution'                 => (
+    'is'                           => 'rw',
+);
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -208,8 +209,9 @@ has "distribution" => ( "is" => "rw", );
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "documentation" => ( "is" => "rw", );
-
+has 'documentation'                => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -222,37 +224,34 @@ has "documentation" => ( "is" => "rw", );
 #   propertyname => "id",
 #   typename => "file",
 # }
-has "id" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'id'                           => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "boolean" },
 #   propertyname => "indexed",
 #   typename => "file",
 # }
-has "indexed" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "boolean",
+has 'indexed'                      => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'boolean',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "integer" },
 #   propertyname => "level",
 #   typename => "file",
 # }
-has "level" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "integer",
+has 'level'                        => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'integer',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -265,13 +264,12 @@ has "level" => (
 #   propertyname => "maturity",
 #   typename => "file",
 # }
-has "maturity" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'maturity'                     => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -284,13 +282,12 @@ has "maturity" => (
 #   propertyname => "mime",
 #   typename => "file",
 # }
-has "mime" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'mime'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -351,12 +348,11 @@ has "mime" => (
 #   $a->{propertydata}{properties}{version}{omit_norms} = \${$a->{propertydata}{include_in_root}};
 #   $a;
 # }
-has "module" => (
-  "dynamic"         => undef,
-  "include_in_root" => "1",
-  "is"              => "rw",
+has 'module'                       => (
+    'dynamic'                      => undef,
+    'include_in_root'              => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -369,13 +365,12 @@ has "module" => (
 #   propertyname => "name",
 #   typename => "file",
 # }
-has "name" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'name'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -388,13 +383,12 @@ has "name" => (
 #   propertyname => "path",
 #   typename => "file",
 # }
-has "path" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'path'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -411,21 +405,21 @@ has "path" => (
 #   propertyname => "pod",
 #   typename => "file",
 # }
-has "pod" => ( "is" => "rw", );
-
+has 'pod'                          => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => { index => "no", store => "yes", type => "string" },
 #   propertyname => "pod_lines",
 #   typename => "file",
 # }
-has "pod_lines" => (
-  "index" => "no",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'pod_lines'                    => (
+    'index'                        => 'no',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # do {
 #   my $a = {
 #     index => "cpan_v1",
@@ -466,32 +460,31 @@ has "pod_lines" => (
 #   $a->{propertydata}{fields}{lowercase}{include_in_all} = \${$a->{propertydata}{fields}{analyzed}{include_in_all}};
 #   $a;
 # }
-has "release" => ( "is" => "rw", );
-
+has 'release'                      => (
+    'is'                           => 'rw',
+);
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "integer" },
 #   propertyname => "sloc",
 #   typename => "file",
 # }
-has "sloc" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "integer",
+has 'sloc'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'integer',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "integer" },
 #   propertyname => "slop",
 #   typename => "file",
 # }
-has "slop" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "integer",
+has 'slop'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'integer',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -507,11 +500,10 @@ has "slop" => (
 #   propertyname => "stat",
 #   typename => "file",
 # }
-has "stat" => (
-  "dynamic" => "1",
-  "is"      => "rw",
+has 'stat'                         => (
+    'dynamic'                      => '1',
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -524,13 +516,12 @@ has "stat" => (
 #   propertyname => "status",
 #   typename => "file",
 # }
-has "status" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'status'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -543,23 +534,22 @@ has "status" => (
 #   propertyname => "version",
 #   typename => "file",
 # }
-has "version" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'version'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "float" },
 #   propertyname => "version_numified",
 #   typename => "file",
 # }
-has "version_numified" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "float",
+has 'version_numified'             => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
 
 no Moose;
@@ -575,11 +565,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::File
+MetaCPAN::API::ESX::Model::File - Generated model for file
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

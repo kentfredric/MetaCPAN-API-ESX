@@ -3,10 +3,13 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::Rating::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::Rating::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::Rating::VERSION = '0.1.0';
 }
 use strict;
 use warnings FATAL => 'all';
+
+# ABSTRACT: Generated model for rating
+
 use Moose;
 use ElasticSearchX::Model::Document;
 
@@ -22,24 +25,22 @@ use ElasticSearchX::Model::Document;
 #   propertyname => "author",
 #   typename => "rating",
 # }
-has "author" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'author'                       => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { format => "dateOptionalTime", store => "yes", type => "date" },
 #   propertyname => "date",
 #   typename => "rating",
 # }
-has "date" => (
-  "is"    => "rw",
-  "store" => "yes",
+has 'date'                         => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -57,11 +58,10 @@ has "date" => (
 #   propertyname => "details",
 #   typename => "rating",
 # }
-has "details" => (
-  "dynamic" => undef,
-  "is"      => "rw",
+has 'details'                      => (
+    'dynamic'                      => undef,
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -74,13 +74,12 @@ has "details" => (
 #   propertyname => "distribution",
 #   typename => "rating",
 # }
-has "distribution" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'distribution'                 => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -99,23 +98,21 @@ has "distribution" => (
 #   propertyname => "helpful",
 #   typename => "rating",
 # }
-has "helpful" => (
-  "dynamic" => undef,
-  "is"      => "rw",
+has 'helpful'                      => (
+    'dynamic'                      => undef,
+    'is'                           => 'rw',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => { store => "yes", type => "float" },
 #   propertyname => "rating",
 #   typename => "rating",
 # }
-has "rating" => (
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "float",
+has 'rating'                       => (
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'float',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -128,13 +125,12 @@ has "rating" => (
 #   propertyname => "release",
 #   typename => "rating",
 # }
-has "release" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'release'                      => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
-
 # {
 #   index => "cpan_v1",
 #   propertydata => {
@@ -147,11 +143,11 @@ has "release" => (
 #   propertyname => "user",
 #   typename => "rating",
 # }
-has "user" => (
-  "index" => "not_analyzed",
-  "is"    => "rw",
-  "store" => "yes",
-  "type"  => "string",
+has 'user'                         => (
+    'index'                        => 'not_analyzed',
+    'is'                           => 'rw',
+    'store'                        => 'yes',
+    'type'                         => 'string',
 );
 
 no Moose;
@@ -167,11 +163,11 @@ __END__
 
 =head1 NAME
 
-MetaCPAN::API::ESX::Model::Rating
+MetaCPAN::API::ESX::Model::Rating - Generated model for rating
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

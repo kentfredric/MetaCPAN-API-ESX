@@ -21,7 +21,7 @@ my %module_build_args = (
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "MetaCPAN-API-ESX",
-  "dist_version" => "0.001000",
+  "dist_version" => "0.1.0",
   "license" => "perl",
   "module_name" => "MetaCPAN::API::ESX",
   "recommends" => {},
@@ -32,7 +32,7 @@ my %module_build_args = (
     "Module::Runtime" => 0,
     "Moose" => 0,
     "Scalar::Util" => 0,
-    "perl" => "5.006",
+    "perl" => "v5.10.0",
     "strict" => 0,
     "warnings" => 0
   },

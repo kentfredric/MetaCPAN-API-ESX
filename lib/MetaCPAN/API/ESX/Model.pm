@@ -7,7 +7,7 @@ BEGIN {
   $MetaCPAN::API::ESX::Model::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MetaCPAN::API::ESX::Model::VERSION = '0.001000';
+  $MetaCPAN::API::ESX::Model::VERSION = '0.1.0';
 }
 use Moose;
 use ElasticSearchX::Model;
@@ -28,7 +28,7 @@ MetaCPAN::API::ESX::Model
 
 =head1 VERSION
 
-version 0.001000
+version 0.1.0
 
 =head1 AUTHOR
 

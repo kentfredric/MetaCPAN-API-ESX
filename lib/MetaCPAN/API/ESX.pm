@@ -5,14 +5,47 @@ package MetaCPAN::API::ESX;
 
 # ABSTRACT: Access the MetaCPAN API Via ElasticSearch Models
 
+=head1 SYNOPSIS
+
+    my $es = MetaCPAN::API::ESX->new();
+
+    my $iterator = $es->author->filter({
+        or => [
+            { term => { country => 'NZ' }},
+            { term => { country => 'AU' }},
+        ]
+    })->size(500)->scroll(5m);
+
+    while( my $author = $iterator->next ){
+        printf "%4s: %20s => %-40s ( %s )\n",
+            $result->country,
+            $result->pauseid,
+            $result->name,
+            join q{,}, grep { defined } $result->city, $result->region;
+    }
+
+=cut
+
 use Moose;
 use Scalar::Util qw( blessed );
 use Module::Runtime qw( compose_module_name use_module );
 
-has es => ( is => rw =>, builder => _build_es =>, );
-has model => ( is => ro =>, builder => _build_model =>, lazy => 1 );
+has es           => ( is => rw =>, builder => _build_es           =>, );
+has es_server    => ( is => ro =>, builder => _build_es_server    =>, lazy => 1, );
+has es_transport => ( is => ro =>, builder => _build_es_transport =>, lazy => 1, );
+has model        => ( is => ro =>, builder => _build_model        =>, lazy => 1, );
 
-sub _build_es { 'api.metacpan.org:80' }
+sub _build_es_server    { 'api.metacpan.org:80' }
+sub _build_es_transport { 'httptiny' }
+
+sub _build_es {
+  my $self = shift;
+  return {
+    servers    => $self->es_server,
+    transport  => $self->es_transport,
+    no_refresh => 1,
+  };
+}
 
 sub _build_model {
   my ( $self, ) = @_;
@@ -31,41 +64,15 @@ sub _build_base_class {
   return blessed($self);
 }
 
-sub author {
-  return $_[0]->_model('author');
-}
-
-sub dependency {
-  return $_[0]->_model('dependency');
-}
-
-sub distribution {
-  return $_[0]->_model('distribution');
-}
-
-sub favorite {
-  return $_[0]->_model('favorite');
-}
-
-sub file {
-  return $_[0]->_model('mirror');
-}
-
-sub mirror {
-  return $_[0]->_model('module');
-}
-
-sub profile {
-  return $_[0]->_model('profile');
-}
-
-sub rating {
-  return $_[0]->_model('rating');
-}
-
-sub release {
-  return $_[0]->_model('release');
-}
+sub author       { return $_[0]->_model('author') }
+sub dependency   { return $_[0]->_model('dependency') }
+sub distribution { return $_[0]->_model('distribution') }
+sub favorite     { return $_[0]->_model('favorite') }
+sub file         { return $_[0]->_model('mirror') }
+sub mirror       { return $_[0]->_model('module') }
+sub profile      { return $_[0]->_model('profile') }
+sub rating       { return $_[0]->_model('rating') }
+sub release      { return $_[0]->_model('release') }
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
